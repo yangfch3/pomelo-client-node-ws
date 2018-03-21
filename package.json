@@ -1,7 +1,7 @@
 {
-  "name": "pomelo-client-node",
+  "name": "pomelo-client-node-ws",
   "version": "1.0.0",
-  "description": "pomelo client written in node.js",
+  "description": "pomelo client written in node.js based ws",
   "keywords": [
     "pomelo",
     "pomelo-client",

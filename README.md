@@ -1,4 +1,4 @@
-# pomelo-client-node
+# pomelo-client-node-ws
 Pomelo 客户端的 Node.js 实现，适用于 `hybridconnector` 型 `connector`。
 
 ## Features
