@@ -1,0 +1,32 @@
+{
+  "name": "pomelo-client-node",
+  "version": "1.0.0",
+  "description": "pomelo client written by node.js",
+  "keywords": [
+    "pomelo",
+    "pomelo-client",
+    "pomelo-client-node"
+  ],
+  "main": "index.js",
+  "dependencies": {
+    "pomelo-decodeio-protobuf": "0.0.1",
+    "pomelo-protobuf": "^0.4.0",
+    "pomelo-protocol": "^0.1.6",
+    "store": "^2.0.12",
+    "ws": "^5.1.0"
+  },
+  "devDependencies": {},
+  "author": "yangfch3",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangfch3/pomelo-client-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yangfch3/pomelo-client-node/issues"
+  },
+  "homepage": "https://github.com/yangfch3/pomelo-client-node#readme"
+}
