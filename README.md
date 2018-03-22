@@ -14,7 +14,7 @@ npm i pomelo-client-node-ws
 ```
 
 ```javascript
-const Pomelo = require('pomelo-client-websocket-node');
+const Pomelo = require('pomelo-client-node-ws');
 const pomelo = new Pomelo();
 
 pomelo.init({
