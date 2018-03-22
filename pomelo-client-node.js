@@ -132,6 +132,8 @@ class Pomelo extends EventEmitter {
         let onopen = function () {
             if (self.reconnect) {
                 self.emit('reconnect');
+            } else {
+                self.emit('connected');
             }
             self.reset();
             let obj = Package.encode(Package.TYPE_HANDSHAKE, Protocol.strencode(JSON.stringify(self.handshakeBuffer)));
@@ -151,7 +153,7 @@ class Pomelo extends EventEmitter {
         let onclose = function (event) {
             self.emit('close', event);
             self.emit('disconnect', event);
-            console.error('socket close: ', event);
+            console.error('socket close: ', event.target.url);
             if (params.reconnect && self.reconnectAttempts < self.maxReconnectAttempts) {
                 self.reconnect = true;
                 self.reconnectAttempts++;
