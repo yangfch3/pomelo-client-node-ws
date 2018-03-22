@@ -364,6 +364,7 @@ class Pomelo extends EventEmitter {
     processMessage(msg) {
         if (!msg.id) {
             // server push message
+            this.emit('__CLIENT_ROUTE', msg.route, msg.body);
             this.emit(msg.route, msg.body);
             return;
         }

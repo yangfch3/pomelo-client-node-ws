@@ -5,13 +5,15 @@ Pomelo 客户端的 Node.js 实现，适用于 `hybridconnector` 型 `connector`
 1. 支持多 pomelo 客户端实例的创建
 2. 与浏览器端 pomelo 客户端保持相同 API
 3. `wss` 协议支持
+4. `protobuf` 支持
+5. 客户端实例新增 `__CLIENT_ROUTE` 用于对所有服务器端推送消息进行统一处理
 
 ## Usage
 ```
 npm i pomelo-client-node-ws
 ```
 
-```
+```javascript
 const Pomelo = require('pomelo-client-websocket-node');
 const pomelo = new Pomelo();
 
@@ -41,5 +43,11 @@ pomelo.init({
 
 pomelo.on('loginRes', (data) => {
     console.log(data);
-})
+});
+
+// Feature: 对所有服务端推送消息的统一处理
+pomelo.on('__CLIENT_ROUTE', (route, data) => {
+    console.log(route);
+    console.log(data);
+});
 ```
