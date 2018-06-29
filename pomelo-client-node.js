@@ -303,14 +303,19 @@ class Pomelo extends EventEmitter {
             self.send(obj);
 
             self.nextHeartbeatTimeout = Date.now() + self.heartbeatTimeout;
-            self.heartbeatTimeoutId = setTimeout(self.heartbeatTimeoutCb, self.heartbeatTimeout);
+            self.heartbeatTimeoutId = setTimeout(function () {
+              self.heartbeatTimeoutCb()
+            }, self.heartbeatTimeout);
         }, this.heartbeatInterval);
     }
 
     heartbeatTimeoutCb() {
+        let self = this
         let gap = this.nextHeartbeatTimeout - Date.now();
         if (gap > this.gapThreshold) {
-            this.heartbeatTimeoutId = setTimeout(this.heartbeatTimeoutCb, gap);
+            this.heartbeatTimeoutId = setTimeout(function () {
+              self.heartbeatTimeoutCb()
+            }, gap);
         } else {
             console.error('server heartbeat timeout');
             this.emit('heartbeat timeout');
