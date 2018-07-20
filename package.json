@@ -1,6 +1,6 @@
 {
   "name": "pomelo-client-node-ws",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "pomelo client written in node.js based ws",
   "keywords": [
     "pomelo",
@@ -11,7 +11,7 @@
   "dependencies": {
     "pomelo-decodeio-protobuf": "0.0.1",
     "pomelo-protobuf": "^0.4.0",
-    "pomelo-protocol": "^0.1.6",
+    "@yangfch3/pomelo-protocol": "^0.0.1",
     "store": "^2.0.12",
     "ws": "^5.1.0"
   },
