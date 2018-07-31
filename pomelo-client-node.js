@@ -2,7 +2,7 @@ const JS_WS_CLIENT_TYPE = 'js-websocket'
 const JS_WS_CLIENT_VERSION = '0.0.1'
 
 const WebSocket = require('ws')
-const Protocol = require('pomelo-protocol')
+const Protocol = require('@yangfch3/pomelo-protocol')
 const Protobuf = require('./lib/pomelo-protobuf/protobuf')
 const decodeIO_protobuf = require('pomelo-decodeio-protobuf')
 let decodeIO_encoder = null
