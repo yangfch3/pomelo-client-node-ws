@@ -279,7 +279,7 @@ class Pomelo extends EventEmitter {
     if (this.socket && this.socket.readyState === WebSocket.OPEN) {
       this.socket.send(packet)
     } else {
-      console.warn('socket is not open: readyState ' + this.socket.readyState)
+      console.warn('socket is not open: readyState ' + (this.socket ? this.socket.readyState : -1))
     }
   }
 
