@@ -153,7 +153,7 @@ class Pomelo extends EventEmitter {
     let onclose = function (event) {
       self.emit('close', event)
       self.emit('disconnect', event)
-      console.error('socket close: ', event.target.url)
+      console.warn('socket close: ', event.target.url, event)
       if (params.reconnect && self.reconnectAttempts < self.maxReconnectAttempts) {
         self.reconnect = true
         self.reconnectAttempts++
